@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#414141</color>
+    <color name="colorPrimaryDark">#4B5A57</color>
+    <color name="colorAccent">#CE5E16</color>
+    <color name="colorSecondary">#E2540E</color>
+    <color name="colorSecondaryPressed">#92370C</color>
+
+    <color name="click_start_color">#FF5722</color>
+    <color name="click_end_color">#FFEB3B</color>
+    <color name="click_start_color_bg">#4CAE50</color>
+    <color name="click_end_color_bg">#4CAE70</color>
+</resources>

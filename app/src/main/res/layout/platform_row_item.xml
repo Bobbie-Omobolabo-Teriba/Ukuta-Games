@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="155dp"
+    android:layout_marginTop="5dp"
+    android:padding="8dp"
+    android:background="#353333"
+    android:id="@+id/container2">
+
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/loading_shape"
+        android:id="@+id/thumbnail_plat"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:orientation="vertical"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/platform_name"
+            android:text="Platform Name"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Developer"
+            android:textColor="#fff"
+            android:id="@+id/developer"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Launch"
+            android:textColor="#fff"
+            android:id="@+id/launch"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
