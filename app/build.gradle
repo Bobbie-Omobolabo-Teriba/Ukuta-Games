@@ -41,4 +41,5 @@ dependencies {
     annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
+    androidTestImplementation 'androidx.test:rules:1.2.0-beta01'
 }
