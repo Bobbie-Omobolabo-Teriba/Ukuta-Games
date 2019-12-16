@@ -70,6 +70,7 @@ public class PlatformRepository {
             platformDao.update(platforms[0]);
             return null;
         }
+
     }
 
     private static class DeletePlatformAsynchTask extends AsyncTask<Platform,Void,Void> {

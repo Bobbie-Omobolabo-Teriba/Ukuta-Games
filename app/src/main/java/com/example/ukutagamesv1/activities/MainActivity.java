@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Notification;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -51,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerViewAdapter myadapter;
     private ProgressBar progressBar;
+    private ProgressDialog progressDialog;
 
 
     @Override
@@ -67,6 +70,10 @@ public class MainActivity extends AppCompatActivity {
                 toast.show();
             }
         });
+
+        progressDialog = new ProgressDialog(MainActivity.this);
+        progressDialog.setMessage("Loading games. This may take a minute...");
+        progressDialog.show();
 
         new LongRunningTask().execute();
 
@@ -87,6 +94,8 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected Void doInBackground(final Void... voids) {
+
+
 
             //private void jsonrequest() {
             Log.d(TAG, "doInBackground: JSON URL CALL");
@@ -112,6 +121,8 @@ public class MainActivity extends AppCompatActivity {
 
                             lstGame.add(game);
 
+
+
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -131,7 +142,6 @@ public class MainActivity extends AppCompatActivity {
             return null;
         }
 
-
         @Override
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
@@ -142,9 +152,10 @@ public class MainActivity extends AppCompatActivity {
 
         myadapter = new RecyclerViewAdapter(this, lstGame);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
+        progressDialog.dismiss();
         recyclerView.setAdapter(myadapter);
     }
+
 
 
     @Override
